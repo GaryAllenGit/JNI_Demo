@@ -4,7 +4,7 @@
 
 // Implementation of the native method sayHello()
 JNIEXPORT void JNICALL Java_HelloWorldJNI_sayHello(JNIEnv *env, jobject thisObj) {
-   printf("Hello World!\n");
+   printf("Hello World from some C code!\n");
    return;
 }
 
