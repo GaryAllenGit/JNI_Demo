@@ -33,10 +33,16 @@ The above commands:
 
 If all goes well the output "Hello World!" will be printed to the screen.
 
+A variation of the above uses C++ to implement the "sayHello" method (instead of C).  Rebuild the shared library from C++ and rerun the Java program with the following commands:
+
+    g++ -fPIC -I"$JAVA_HOME/include" -I"$JAVA_HOME/include/linux" -shared -o libhello.so HelloWorldJNI.cpp
+    java -Djava.library.path=. HelloWorldJNI
+
+
 
 2.  A simple calculator example
 
-The above example has no parameter passing and no value returned from the called C function.  The following example includes both of these.
+The above example has no parameter passing and no value returned from the called C (or C++) function.  The following example includes both of these.
 
 Again, import the code into IntelliJ and open the embedded terminal.  If not already in the src folder then cd to it (as above), then type:
 
@@ -46,8 +52,10 @@ Again, import the code into IntelliJ and open the embedded terminal.  If not alr
 
 Check that the output makes sense, and look at the code to see what it is doing.
 
+Why not try implementing a C++ version of the Calculator.c program, as with the HelloWorld program above?
 
-Note that the "javac -h" and "gcc" commands will have to be run through the terminal, but the java code can be run direct from the IDE in the usual way as long as the following is added to the VM arguments of the Run Configuration:
+
+Note that the "javac", "gcc", and "g++" commands will have to be run through the terminal, but the java code can be run direct from the IDE in the usual way as long as the following is added to the VM arguments of the Run Configuration:
 
     -Djava.library.path=src
 
