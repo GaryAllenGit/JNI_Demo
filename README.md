@@ -31,7 +31,7 @@ The above commands:
     compile the C code
     run the java program, which in turn loads and runs the C code.
 
-If all goes well the output "Hello World!" will be printed to the screen.
+If all goes well the output "Hello World from some C code!" will be printed to the screen.
 
 A variation of the above uses C++ to implement the "sayHello" method (instead of C).  Rebuild the shared library from C++ and rerun the Java program with the following commands:
 
